@@ -4,17 +4,7 @@ html(lang="ko")
         title #{pageTitle} | Wetube 
         link(rel="stylesheet" href="https://unpkg.com/mvp.css@1.10.2/mvp.css")
     body 
-        header 
-            if fakeUser.loggedIn
-                small Hello #{fakeUser.username}
-            nav 
-                ul
-                    if fakeUser.loggedIn 
-                        li 
-                            a(href="/Logout") Log out
-                    else
-                        li 
-                            a(href="/Login") Login  
+        header  
             h1=pageTitle 
         main 
             block content
